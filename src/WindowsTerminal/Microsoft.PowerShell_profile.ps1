@@ -12,6 +12,37 @@ Import-Module "EFPosh";
 Import-Module "PoshGrep";
 Import-Module "Pester";
 
+# Startup
+function changeTheme {
+    $Themes = "C:\Users\timde\AppData\Local\Programs\oh-my-posh\themes\"
+    $Theme = $args[0]
+    if($null -eq $Theme) {
+        $Theme = Get-ChildItem $Themes -name | Select-Object -index $(Random $((Get-ChildItem $Themes).Count))
+    } else {
+        $Theme = $Theme + ".omp.json"
+    }
+    Write-Output "Using $Theme"
+    oh-my-posh init pwsh --config "$Themes$Theme" | Invoke-Expression
+}
+# Always use a random theme
+changeTheme
+fnm env --use-on-cd | Out-String | Invoke-Expression
+# History
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+# Alias
+Set-Alias -Name code -Value code-insiders
+function .. {
+    cd ..
+}
+function .... {
+    cd ../../
+}
+function ...... {
+    cd ../../../
+}
+
 ################################################################################
 #                                  Oh my Posh!                                 #
 ################################################################################
@@ -283,3 +314,42 @@ function Invoke-Docker-Delete-Image {
   docker image rm;
 };
 Set-Alias -Name "dri" -Value "Invoke-Docker-Delete-Image";
+
+# Macros
+# Inspired by Scott's profile https://gist.github.com/shanselman/25f5550ad186189e0e68916c6d7f44c3
+Set-PSReadLineKeyHandler -Key Ctrl+Shift+b `
+    -BriefDescription BuildCurrentDirectory `
+    -LongDescription "Build the current directory" `
+    -ScriptBlock {
+        [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+        if(Test-Path -Path ".\package.json") {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Insert("npm run build")
+        }else {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet build")
+        }
+        [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+    }
+Set-PSReadLineKeyHandler -Key Ctrl+Shift+t `
+    -BriefDescription BuildCurrentDirectory `
+    -LongDescription "Build the current directory" `
+    -ScriptBlock {
+        [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+        if(Test-Path -Path ".\package.json") {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Insert("npm run test")
+        }else {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet test")
+        }
+        [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+    }
+Set-PSReadLineKeyHandler -Key Ctrl+Shift+s `
+    -BriefDescription StartCurrentDirectory `
+    -LongDescription "Start the current directory" `
+    -ScriptBlock {
+        [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+        if(Test-Path -Path ".\package.json") {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Insert("npm start")
+        }else {
+            [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet run")
+        }
+        [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+    }
