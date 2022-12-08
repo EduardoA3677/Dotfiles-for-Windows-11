@@ -1,10 +1,4 @@
-$GitHubRepositoryUri = "https://github.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/archive/refs/heads/main.zip";
-
-$DotfilesFolder = Join-Path -Path $HOME -ChildPath ".dotfiles";
-$ZipRepositoryFile = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main.zip";
-$DotfilesWorkFolder = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "src";
-
-$DownloadResult = $FALSE;
+$GitHubRepositoryName = 'Dotfiles-for-Windows-11';
 
 # Request custom values
 $ComputerName = Read-Host -Prompt "Input the new computer name here";
@@ -20,6 +14,14 @@ do {
   $WorkspaceDisk = Read-Host -Prompt "Please choose one of the available disks";
 }
 while (-not ($ValidDisks -Contains $WorkspaceDisk));
+
+$GitHubRepositoryUri = "https://github.com/${GitUserName}/${GitHubRepositoryName}/archive/refs/heads/main.zip";
+
+$DotfilesFolder = Join-Path -Path $HOME -ChildPath '.dotfiles';
+$ZipRepositoryFile = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main.zip";
+$DotfilesWorkFolder = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath 'src';
+
+$DownloadResult = $FALSE;
 
 # Create Dotfiles folder
 if (Test-Path $DotfilesFolder) {
