@@ -3,10 +3,9 @@ $GitHubRepositoryName = 'Dotfiles-for-Windows-11';
 # Request custom values
 $ComputerName = ( ($defaultValue = 'NFG-PC'), (Read-Host "Input the new computer name here [$defaultValue]")) -match '\S' | Select-Object -Last 1
 
-$GitUserName = = ( ($defaultValue = 'DakineMI'), (Read-Host "Input your Git user name here [$defaultValue]")) -match '\S' | Select-Object -Last 1
+$GitUserName =  ( ($defaultValue = 'DakineMI'), (Read-Host "Input your Git user name here [$defaultValue]")) -match '\S' | Select-Object -Last 1
 
 $GitUserEmail = ( ($defaultValue = 'Jonathan.m.hughes.1@gmail.com'), (Read-Host "Input your Git user email here [$defaultValue]")) -match '\S' | Select-Object -Last 1
-
 
 $ValidDisks = Get-PSDrive -PSProvider "FileSystem" | Select-Object -ExpandProperty "Root";
 do {
