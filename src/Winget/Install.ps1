@@ -32,8 +32,6 @@ wip Microsoft.DotNet.SDK.3_1
 wip Microsoft.DotNet.SDK.5 
 wip Microsoft.DotNet.SDK.6 
 wip Microsoft.DotNet.SDK.7 
-wip Microsoft.Edge 
-wip Microsoft.MultilingualAppToolKit 
 wip Microsoft.NuGet 
 wip Microsoft.OpenSSH.Beta 
 wip Microsoft.PowerAppsCLI 
