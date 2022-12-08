@@ -22,7 +22,6 @@ wip JanDeDobbeleer.OhMyPosh
 wip jasongin.nvs 
 wip JetBrains.Toolbox 
 wip Kubernetes.minikube 
-wip LINE.LINE 
 wip mentebinaria.retoolkit 
 wip Microsoft.AzureDataStudio 
 wip Microsoft.BingWallpaper 
@@ -60,3 +59,6 @@ wip ScooterSoftware.BeyondCompare4
 wip wethat.onenotetaggingkit 
 wip WinMerge.WinMerge 
 wip WiresharkFoundation.Wireshark 
+
+# Line
+wip 9WZDNCRFJ2G6
