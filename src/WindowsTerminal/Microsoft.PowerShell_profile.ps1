@@ -3,16 +3,20 @@
 ################################################################################
 
 Clear-Host;
+Import-Module "posh-git";
+Import-Module "posh-git-workflow";
+Import-Module "Terminal-Icons";
+Import-Module "PSReadLine";
+Import-Module "PoshFunctions";
+Import-Module "EFPosh";
+Import-Module "PoshGrep";
+Import-Module "Pester";
 
 ################################################################################
 #                                  Oh my Posh!                                 #
 ################################################################################
 
-Import-Module "oh-my-posh";
-Import-Module "posh-git";
-Import-Module "Terminal-Icons";
-Import-Module "PSReadLine";
-Set-PoshPrompt -Theme "~/.oh-my-posh-custom-theme.omp.json";
+oh-my-posh init pwsh --config "~/.oh-my-posh-custom-theme.omp.json"| Invoke-Expression;
 
 ################################################################################
 #                                  PSReadLine                                  #
@@ -63,13 +67,13 @@ Set-Alias -Name "..." -Value "Set-Location-Two-Times";
 function Set-Location-Three-Times { Set-Location "..\..\.."; };
 Set-Alias -Name "...." -Value "Set-Location-Three-Times";
 
-function New-Folder-Navigate-To-It {
-  param($newFolderName);
-
-  New-Item $newFolderName -ItemType directory;
-  Set-Location -Path $newFolderName;
-};
-Set-Alias -Name "mkcd" -Value "New-Folder-Navigate-To-It";
+#function New-Folder-Navigate-To-It {
+#  param($newFolderName);
+#
+#  New-Item $newFolderName -ItemType directory;
+#  Set-Location -Path $newFolderName;
+#};
+#Set-Alias -Name "mkcd" -Value "New-Folder-Navigate-To-It";
 
 function Open-Recycle-Bin {
   explorer.exe Shell:RecycleBinFolder;
@@ -89,6 +93,67 @@ function Update-System {
   wsl sudo apt --yes upgrade;
 };
 Set-Alias -Name "updsys" -Value "Update-System";
+
+function WingetInstallPackage(
+    
+    [CmdletBinding()]
+    [Alias("WIP")]
+    [Parameter(Position = 0)][System.String]$package)
+{
+    $item = $wingetList | Where-Object IdPrefix -eq $package 
+    $status = if($item) {if($item.Available){'Upgrade'}else{'Current'}} else {'Install'}
+    if($status -eq 'Current')
+    {
+        Write-Host -Fore Yellow ` ($package + ' installed at current version')
+    }
+    if($status -eq 'Install')
+    {
+        Write-Host -Fore Yellow ` ('Installing ' + $package)
+        winget install $package -h --exact --accept-source-agreements --accept-package-agreements --force
+    }
+    if($status -eq 'Upgrade') 
+    {
+        Write-Host -Fore Yellow ` ('Upgrading ' + $package)
+        winget upgrade $package -h --exact --accept-source-agreements --accept-package-agreements --include-unknown --force
+    }
+}
+Set-Alias -Name "WIP" -Value "WingetInstallPackage";
+
+function WingetUninstallPackage(
+
+    [CmdletBinding()]
+    [Alias("WUIP")]
+    [Parameter(Position = 0)][System.String]$package)
+{
+    if(winget list --exact -q=$package) 
+    {
+        Write-Host -Fore Yellow ` ('Uninstalling ' + $package)
+        winget uninstall $package -h --exact 
+    }
+}
+Set-Alias -Name "WUIP" -Value "WingetUninstallPackage";
+
+function Add-ToUserPath {
+    param (                     
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
+        [string] 
+        $dir
+    )
+
+    $dir = (Resolve-Path $dir)
+
+    $path = [Environment]::GetEnvironmentVariable("PATH", [System.EnvironmentVariableTarget]::User)
+    if (!($path.Contains($dir))) {
+        # backup the current value
+        "PATH=$path" | Set-Content -Path "$env:USERPROFILE/path.env"
+        # append dir to path
+        [Environment]::SetEnvironmentVariable("PATH", $path + ";$dir", [EnvironmentVariableTarget]::User)
+        Write-Host "Added $dir to PATH"
+        return
+    }
+    Write-Error "$dir is already in PATH"
+}
 
 ################################################################################
 #                         Environment Variables Aliases                        #
@@ -218,3 +283,43 @@ function Invoke-Docker-Delete-Image {
   docker image rm;
 };
 Set-Alias -Name "dri" -Value "Invoke-Docker-Delete-Image";
+
+###############################################################################
+###############################################################################
+Set-Location 'C:\Source\Repos\Dotfiles-for-Windows-11\Src';
+$ComputerName = 'NFG-PC'; # Read-Host -Prompt "Input the new computer name here";
+$GitUserName = 'DakineMI'; #Read-Host -Prompt "Input your Git user name here";
+$GitUserEmail = 'jonathan.m.hughes.1@gmail.com'; #Read-Host -Prompt "Input your Git user email here";
+
+$ValidDisks = Get-PSDrive -PSProvider "FileSystem" | Select-Object -ExpandProperty "Root";
+#do {
+#  Write-Host "Choose the location of your development workspace:" -ForegroundColor "Green";
+#  Write-Host $ValidDisks -ForegroundColor "Green";
+#  $WorkspaceDisk = Read-Host -Prompt "Please choose one of the available disks";
+#}
+#while (-not ($ValidDisks -Contains $WorkspaceDisk));
+$WorkspaceDisk = 'C:\Source'
+
+$GitHubRepositoryAuthor = "DakineMI";
+$GitHubRepositoryName = "Dotfiles-for-Windows-11";
+$DotfilesFolder = Join-Path -Path $HOME -ChildPath ".dotfiles";
+$DotfilesWorkFolder = ".";
+$DotfilesHelpersFolder = Join-Path -Path $DotfilesWorkFolder -ChildPath "Helpers";
+$DotfilesConfigFile = Join-Path -Path $DotfilesFolder -ChildPath "config.json";
+
+Write-Host "Welcome to Dotfiles for Microsoft Windows 11" -ForegroundColor "Yellow";
+Write-Host "Please don't use your device while the script is running." -ForegroundColor "Yellow";
+
+# Load helpers
+Write-Host "Loading helpers:" -ForegroundColor "Green";
+$DotfilesHelpers = Get-ChildItem -Path "${DotfilesHelpersFolder}\*" -Include *.ps1 -Recurse;
+foreach ($DotfilesHelper in $DotfilesHelpers) {
+  . $DotfilesHelper;
+};
+
+# Save user configuration in persistence
+Set-Configuration-File -DotfilesConfigFile $DotfilesConfigFile -ComputerName $ComputerName -GitUserName $GitUserName -GitUserEmail $GitUserEmail -WorkspaceDisk $WorkspaceDisk;
+
+# Load user configuration from persistence
+$Config = Get-Configuration-File -DotfilesConfigFile $DotfilesConfigFile;
+$DotfilesWorkFolder = ".";
