@@ -45,6 +45,7 @@ Register-DotfilesScript-As-RunOnce;
 
 # Run scripts
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "WorkspaceFolder" | Join-Path -ChildPath "WorkspaceFolder.ps1");
+Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Winget" | Join-Path -ChildPath "Winget.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Chocolatey" | Join-Path -ChildPath "Chocolatey.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Fonts" | Join-Path -ChildPath "Fonts.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Git" | Join-Path -ChildPath "Git.ps1");
@@ -62,7 +63,7 @@ Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Windows" | Jo
 Remove-DotfilesScript-From-RunOnce;
 
 Write-Host "Deleting Desktop shortcuts:" -ForegroundColor "Green";
-Remove-Desktop-Shortcuts;
+#Remove-Desktop-Shortcuts;
 
 Write-Host "Cleaning Dotfiles workspace:" -ForegroundColor "Green";
 Remove-Item $DotfilesFolder -Recurse -Force -ErrorAction SilentlyContinue;
@@ -71,4 +72,4 @@ Write-Host "The process has finished." -ForegroundColor "Yellow";
 
 Write-Host "Restarting the PC in 10 seconds..." -ForegroundColor "Green";
 Start-Sleep -Seconds 10;
-Restart-Computer;
+#Restart-Computer;
