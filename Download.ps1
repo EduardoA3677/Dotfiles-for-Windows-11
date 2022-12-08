@@ -1,17 +1,19 @@
 $GitHubRepositoryName = 'Dotfiles-for-Windows-11';
 
 # Request custom values
-$ComputerName = Read-Host -Prompt "Input the new computer name here";
+$ComputerName = ( ($defaultValue = 'NFG-PC'), (Read-Host "Input the new computer name here [$defaultValue]")) -match '\S' | Select-Object -Last 1
 
-$GitUserName = Read-Host -Prompt "Input your Git user name here";
+$GitUserName = = ( ($defaultValue = 'DakineMI'), (Read-Host "Input your Git user name here [$defaultValue]")) -match '\S' | Select-Object -Last 1
 
-$GitUserEmail = Read-Host -Prompt "Input your Git user email here";
+$GitUserEmail = ( ($defaultValue = 'Jonathan.m.hughes.1@gmail.com'), (Read-Host "Input your Git user email here [$defaultValue]")) -match '\S' | Select-Object -Last 1
+
 
 $ValidDisks = Get-PSDrive -PSProvider "FileSystem" | Select-Object -ExpandProperty "Root";
 do {
   Write-Host "Choose the location of your development workspace:" -ForegroundColor "Green";
   Write-Host $ValidDisks -ForegroundColor "Green";
-  $WorkspaceDisk = Read-Host -Prompt "Please choose one of the available disks";
+  $WorkspaceDisk = ( ($defaultValue = 'C:\'), (Read-Host "Please choose one of the available disks [$defaultValue]")) -match '\S' | Select-Object -Last 1
+
 }
 while (-not ($ValidDisks -Contains $WorkspaceDisk));
 
