@@ -77,7 +77,6 @@ wip Microsoft.Sysinternals.ProcessExplorer
 wip Microsoft.TeamMate 
 wip Microsoft.VisualStudio.Locator 
 wip Microsoft.vott 
-wip Microsoft.WindowsAdminCenter 
 wip Microsoft.WingetCreate 
 wip Notepad++.Notepad++ 
 wip OpenJS.NodeJS 
