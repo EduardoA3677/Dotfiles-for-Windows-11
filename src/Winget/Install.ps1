@@ -22,7 +22,7 @@ wip JanDeDobbeleer.OhMyPosh
 wip jasongin.nvs 
 wip JetBrains.Toolbox 
 wip Kubernetes.minikube 
-wip mentebinaria.retoolkit 
+
 wip Microsoft.AzureDataStudio 
 wip Microsoft.BingWallpaper 
 wip Microsoft.BotFrameworkComposer 
@@ -60,3 +60,6 @@ wip WiresharkFoundation.Wireshark
 
 # Line
 wip 9WZDNCRFJ2G6
+
+# Likely has a have a virus! Use with caution 
+# wip mentebinaria.retoolkit 

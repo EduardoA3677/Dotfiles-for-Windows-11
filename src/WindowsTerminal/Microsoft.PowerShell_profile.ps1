@@ -1,20 +1,30 @@
 ################################################################################
 #                                Initial Commands                              #
 ################################################################################
+function LoadModule(
+    [CmdletBinding()]
+    [Parameter(Position = 0)][System.String]$module)
+{
+	if (!(Get-Module -ListAvailable -Name $module)) {
+		Install-Module $module
+	}
+
+	Import-Module $module;
+}
 
 Clear-Host;
-Import-Module "posh-git";
-Import-Module "posh-git-workflow";
-Import-Module "Terminal-Icons";
-Import-Module "PSReadLine";
-Import-Module "PoshFunctions";
-Import-Module "EFPosh";
-Import-Module "PoshGrep";
-Import-Module "Pester";
+LoadModule "posh-git";
+LoadModule "posh-git-workflow";
+LoadModule "Terminal-Icons";
+LoadModule "PSReadLine";
+LoadModule "PoshFunctions";
+LoadModule "EFPosh";
+LoadModule "PoshGrep";
+LoadModule "Pester";
 
 # Startup
 function changeTheme {
-    $Themes = "C:\Users\timde\AppData\Local\Programs\oh-my-posh\themes\"
+    $Themes = Join-Path $Home "\AppData\Local\Programs\oh-my-posh\themes\"
     $Theme = $args[0]
     if($null -eq $Theme) {
         $Theme = Get-ChildItem $Themes -name | Select-Object -index $(Random $((Get-ChildItem $Themes).Count))

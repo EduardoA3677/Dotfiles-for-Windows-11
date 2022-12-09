@@ -22,3 +22,6 @@ function Enable-Chocolatey-Helpers {
 Install-Chocolatey;
 Set-Chocolatey-Configuration;
 Enable-Chocolatey-Helpers;
+
+cinst visualstudio2022 --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"	
+cinst sql-server-2022

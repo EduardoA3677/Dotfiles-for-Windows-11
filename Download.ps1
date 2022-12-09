@@ -44,3 +44,56 @@ if ($DownloadResult) {
   [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipRepositoryFile, $DotfilesFolder);
   Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Setup.ps1");
 }
+
+function LoadModule(
+    [CmdletBinding()]
+    [Parameter(Position = 0)][System.String]$module)
+{
+	if (!(Get-Module -ListAvailable -Name $module)) {
+		Install-Module $module
+	}
+
+	Import-Module $module;
+}
+
+
+function WingetInstallPackage(
+    
+    [CmdletBinding()]
+    [Alias("WIP")]
+    [Parameter(Position = 0)][System.String]$package)
+{
+    $item = $wingetList | Where-Object IdPrefix -eq $package 
+    $status = if($item) {if($item.Available){'Upgrade'}else{'Current'}} else {'Install'}
+    if($status -eq 'Current')
+    {
+        Write-Host -Fore Yellow ` ($package + ' installed at current version')
+    }
+    if($status -eq 'Install')
+    {
+        Write-Host -Fore Yellow ` ('Installing ' + $package)
+        winget install $package -h --exact --accept-source-agreements --accept-package-agreements --force
+    }
+    if($status -eq 'Upgrade') 
+    {
+        Write-Host -Fore Yellow ` ('Upgrading ' + $package)
+        winget upgrade $package -h --exact --accept-source-agreements --accept-package-agreements --include-unknown --force
+    }
+}
+Set-Alias -Name "WIP" -Value "WingetInstallPackage";
+
+function WingetUninstallPackage(
+
+    [CmdletBinding()]
+    [Alias("WUIP")]
+    [Parameter(Position = 0)][System.String]$package)
+{
+    if(winget list --exact -q=$package) 
+    {
+        Write-Host -Fore Yellow ` ('Uninstalling ' + $package)
+        winget uninstall $package -h --exact 
+    }
+}
+Set-Alias -Name "WUIP" -Value "WingetUninstallPackage";
+
+LoadModule "PoshFunctions";

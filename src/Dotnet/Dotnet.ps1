@@ -1,4 +1,3 @@
-choco install -y "dotnet-sdk";
 refreshenv;
 dotnet tool install --global dotnet-ef;
 dotnet tool install --global dotnet-update-all-tools;
