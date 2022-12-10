@@ -3,7 +3,7 @@ wuip 9NBLGGH4QGHW					# Microsoft Sticky Notes
 wuip 9NBLGGH5R558					# Microsoft To Do
 wuip 9MSPC6MP8FM4 					# Microsoft Whiteboard
 wuip XP89DCGQ3K6VLD					# Microsoft PowerToys
-#wuip XP8BT8DW290MPQ					# Microsoft Teams
+#wuip XP8BT8DW290MPQ				# Microsoft Teams
 #wuip 9MZ1SNWT0N5D					# PowerShell
 #wuip 9N0DX20HK701					# Windows Terminal
 wuip XPDCFJDKLZJLP8					# Visual Studio Community 2022
