@@ -43,17 +43,6 @@ function Set-WindowsTerminal-Settings {
   Write-Host "Windows Terminal was successfully configured." -ForegroundColor "Green";
 }
 
-function Open-Close-WindowsTerminal {
-  # Open and close Windows Terminal as admin to load the profile
-  Write-Host "Opening Windows Terminal for 10 seconds:" -ForegroundColor "Green";
-  wt new-tab PowerShell -c "Set-ExecutionPolicy Unrestricted;";
-
-  Start-Sleep -Seconds 10;
-
-  Write-Host "Closing Windows Terminal:" -ForegroundColor "Green";
-  Stop-Process -Name "WindowsTerminal" -Force;
-}
-
 Install-Module -Name "oh-my-posh";
 Install-Module -Name "posh-git" -Repository "PSGallery";
 Install-Module -Name "Terminal-Icons" -Repository "PSGallery";
@@ -62,4 +51,3 @@ Install-Module -Name "PSReadLine" -Repository "PSGallery" -RequiredVersion 2.1.0
 Set-OhMyPosh-Theme;
 Set-PowerShell-Profile;
 Set-WindowsTerminal-Settings;
-#Open-Close-WindowsTerminal;
