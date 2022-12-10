@@ -41,17 +41,7 @@ changeTheme
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
-# Alias
-Set-Alias -Name code -Value code-insiders
-function .. {
-    cd ..
-}
-function .... {
-    cd ../../
-}
-function ...... {
-    cd ../../../
-}
+
 
 ################################################################################
 #                                  Oh my Posh!                                 #
