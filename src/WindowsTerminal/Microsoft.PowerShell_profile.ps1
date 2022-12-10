@@ -36,7 +36,7 @@ function changeTheme {
 }
 # Always use a random theme
 changeTheme
-fnm env --use-on-cd | Out-String | Invoke-Expression
+
 # History
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
