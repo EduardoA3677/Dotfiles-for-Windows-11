@@ -7,6 +7,11 @@ function Install-Chocolatey {
 function Set-Chocolatey-Configuration {
   Write-Host "Configuring Chocolatey:" -ForegroundColor "Green";
   choco feature enable -n=useRememberedArgumentsForUpgrades;
+  choco feature enable -n=allowGlobalConfirmation;
+  choco feature enable -n=ignoreInvalidOptionsSwitches;
+  choco feature enable -n=showNonElevatedWarnings;
+  choco feature enable -n=removePackageInformationOnUninstall;
+  choco feature enable -n=usePackageRepositoryOptimizations;  
 }
 
 function Enable-Chocolatey-Helpers {
@@ -23,5 +28,3 @@ Install-Chocolatey;
 Set-Chocolatey-Configuration;
 Enable-Chocolatey-Helpers;
 
-cinst visualstudio2022 --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"	
-cinst sql-server-2022

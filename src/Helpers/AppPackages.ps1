@@ -7,8 +7,11 @@ function Uninstall-AppPackage {
   )
 
   try {
-    Get-AppxPackage $Name -AllUsers | Remove-AppxPackage;
-    Get-AppXProvisionedPackage -Online | Where-Object DisplayName -like $Name | Remove-AppxProvisionedPackage -Online;    
+#    Get-AppxPackage $Name -AllUsers | Remove-AppxPackage;
+#    Get-AppXProvisionedPackage -Online | Where-Object DisplayName -like $Name | Remove-AppxProvisionedPackage -Online;    
+    Get-AppxPackage $Name -AllUsers;
+    Get-AppXProvisionedPackage -Online | Where-Object DisplayName -like $Name;    
+
   }
   catch {
     

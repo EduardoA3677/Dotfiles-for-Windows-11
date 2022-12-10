@@ -82,11 +82,11 @@ function Set-SetAsBackground-To-Extended-ContextMenu {
 function Disable-RecentlyOpenedItems-From-JumpList {
   Write-Host "Configuring Jump List to do not show the list of recently opened items:" -ForegroundColor "Green";
 
-  $RegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced";
-  if (-not (Test-PathRegistryKey -Path $RegPath -Name "Start_TrackDocs")) {
-    New-ItemProperty -Path $RegPath -Name "Start_TrackDocs" -PropertyType DWord;
-  }
-  Set-ItemProperty -Path $RegPath -Name "Start_TrackDocs" -Value 0;
+#  $RegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced";
+#  if (-not (Test-PathRegistryKey -Path $RegPath -Name "Start_TrackDocs")) {
+#    New-ItemProperty -Path $RegPath -Name "Start_TrackDocs" -PropertyType DWord;
+#  }
+#  Set-ItemProperty -Path $RegPath -Name "Start_TrackDocs" -Value 0;
 }
 
 function Set-Power-Configuration {
@@ -145,10 +145,10 @@ function Rename-PC {
   }
 }
 
-Disable-WindowsFeature "WindowsMediaPlayer" "Windows Media Player";
-Disable-WindowsFeature "Internet-Explorer-Optional-amd64" "Internet Explorer";
-Disable-WindowsFeature "Printing-XPSServices-Features" "Microsoft XPS Document Writer";
-Disable-WindowsFeature "WorkFolders-Client" "WorkFolders-Client";
+#Disable-WindowsFeature "WindowsMediaPlayer" "Windows Media Player";
+#Disable-WindowsFeature "Internet-Explorer-Optional-amd64" "Internet Explorer";
+#Disable-WindowsFeature "Printing-XPSServices-Features" "Microsoft XPS Document Writer";
+#Disable-WindowsFeature "WorkFolders-Client" "WorkFolders-Client";
 Enable-WindowsFeature "Containers-DisposableClientVM" "Windows Sandbox";
 
 Uninstall-AppPackage "Microsoft.Getstarted";
@@ -161,7 +161,7 @@ Set-WindowsFileExplorer-StartFolder;
 Set-Multitasking-Configuration;
 Set-Classic-ContextMenu-Configuration;
 Set-SetAsBackground-To-Extended-ContextMenu;
-Disable-RecentlyOpenedItems-From-JumpList;
+#Disable-RecentlyOpenedItems-From-JumpList;
 Set-Power-Configuration;
 Set-Custom-Regional-Format;
-Rename-PC;
+#Rename-PC;

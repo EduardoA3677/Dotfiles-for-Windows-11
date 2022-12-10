@@ -49,7 +49,6 @@ wip GitExtensionsTeam.GitExtensions
 wip GitHub.cli 
 wip Grammarly.Grammarly 
 wip Grammarly.Grammarly.Office 
-wip Grammarly.ForWindows
 wip HermannSchinagl.LinkShellExtension 
 wip JanDeDobbeleer.OhMyPosh 
 wip jasongin.nvs 
@@ -59,10 +58,14 @@ wip Microsoft.AzureDataStudio
 wip Microsoft.BotFrameworkComposer 
 wip Microsoft.BotFrameworkEmulator 
 wip Microsoft.DeploymentToolkit 
-wip Microsoft.DotNet.SDK.3_1 
+wip Microsoft.DotNet.SDK.3_1
+wip Microsoft.DotNet.Runtime.3_1 
 wip Microsoft.DotNet.SDK.5 
-wip Microsoft.DotNet.SDK.6 
+wip Microsoft.DotNet.Runtime.5 
+wip Microsoft.DotNet.SDK.6
+wip Microsoft.DotNet.Runtime.6 
 wip Microsoft.DotNet.SDK.7 
+wip Microsoft.DotNet.Runtime.7
 wip Microsoft.WindowsSDK 
 wip Microsoft.OpenSSH.Beta 
 wip Microsoft.PowerAppsCLI 
@@ -88,14 +91,6 @@ wip DisplayLink.GraphicsDriver
 wip Postman.Postman.Canary
 
 winget install -e --id Microsoft.VisualStudio.2022.Community --override "--passive --wait --config (.\.vsconfig)"
-#--add Microsoft.VisualStudio.Workload.MSBuildTools
-#--add Microsoft.VisualStudio.Workload.WebBuildTools 
-#--add Microsoft.VisualStudio.Workload.NodeBuildTools
-#--add Microsoft.VisualStudio.Workload.DataBuildTools
-#--add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools
-#--add Microsoft.VisualStudio.Workload.UniversalBuildTools
-#--add Microsoft.VisualStudio.Workload.VisualStudioExtensionBuildTools 
-#--includeRecommended"
 
 wip XPFFTQ037JWMHS					# Microsoft Edge Browser
 wip 9NBLGGH4QGHW					# Microsoft Sticky Notes
@@ -104,7 +99,7 @@ wip 9MSPC6MP8FM4 					# Microsoft Whiteboard
 wip XP8BT8DW290MPQ					# Microsoft Teams
 wip 9MZ1SNWT0N5D					# PowerShell
 wip 9N0DX20HK701					# Windows Terminal
-wip XPDCFJDKLZJLP8					# Visual Studio Community 2022
+#wip XPDCFJDKLZJLP8					# Visual Studio Community 2022
 wip XP8LFCZM790F6B					# Visual Studio Code - Insiders
 wip 9WZDNCRD29V9					# Office (Microsoft 365)
 

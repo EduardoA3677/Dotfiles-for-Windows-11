@@ -42,7 +42,6 @@ if (-not (Get-Module-Installation-Status -ModuleName "PackageManagement" -Module
 Register-DotfilesScript-As-RunOnce;
 
 # Run scripts
-Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Winget" | Join-Path -ChildPath "Install.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "WorkspaceFolder" | Join-Path -ChildPath "WorkspaceFolder.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Chocolatey" | Join-Path -ChildPath "Chocolatey.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Fonts" | Join-Path -ChildPath "Fonts.ps1");
@@ -55,19 +54,20 @@ Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Dotnet" | Joi
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "WSL" | Join-Path -ChildPath "WSL.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Docker" | Join-Path -ChildPath "Docker.ps1");
 Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Windows" | Join-Path -ChildPath "Windows.ps1");
+Invoke-Expression (Join-Path -Path $DotfilesWorkFolder -ChildPath "Winget" | Join-Path -ChildPath "Install.ps1");
 
 # Clean
 # Unregister script from RunOnce
 Remove-DotfilesScript-From-RunOnce;
 
-Write-Host "Deleting Desktop shortcuts:" -ForegroundColor "Green";
+#Write-Host "Deleting Desktop shortcuts:" -ForegroundColor "Green";
 #Remove-Desktop-Shortcuts;
 
-Write-Host "Cleaning Dotfiles workspace:" -ForegroundColor "Green";
-Remove-Item $DotfilesFolder -Recurse -Force -ErrorAction SilentlyContinue;
+#Write-Host "Cleaning Dotfiles workspace:" -ForegroundColor "Green";
+#Remove-Item $DotfilesFolder -Recurse -Force -ErrorAction SilentlyContinue;
 
 Write-Host "The process has finished." -ForegroundColor "Yellow";
 
-Write-Host "Restarting the PC in 10 seconds..." -ForegroundColor "Green";
-Start-Sleep -Seconds 10;
+#Write-Host "Restarting the PC in 10 seconds..." -ForegroundColor "Green";
+#Start-Sleep -Seconds 10;
 #Restart-Computer;

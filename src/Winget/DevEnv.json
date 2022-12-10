@@ -1,0 +1,152 @@
+{
+  "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+  "CreationDate": "2022-12-03T23:06:50.487-00:00",
+  "Sources": [
+    {
+      "Packages": [
+        {
+          "PackageIdentifier": "7zip.7zip"
+        },
+        {
+          "PackageIdentifier": "AgileBits.1Password"
+        },
+        {
+          "PackageIdentifier": "Canonical.Ubuntu"
+        },
+        {
+          "PackageIdentifier": "CoreyButler.NVMforWindows"
+        },
+        {
+          "PackageIdentifier": "DBBrowserForSQLite.DBBrowserForSQLite"
+        },
+        {
+          "PackageIdentifier": "Git.Git"
+        },
+        {
+          "PackageIdentifier": "GitHub.cli"
+        },
+        {
+          "PackageIdentifier": "Google.AndroidStudio"
+        },
+        {
+          "PackageIdentifier": "HermannSchinagl.LinkShellExtension"
+        },
+        {
+          "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
+        },
+        {
+          "PackageIdentifier": "JetBrains.dotUltimate"
+        },
+        {
+          "PackageIdentifier": "JetBrains.Toolbox"
+        },
+        {
+          "PackageIdentifier": "JetBrains.DataGrip"
+        },
+        {
+          "PackageIdentifier": "JetBrains.ReSharper"
+        },
+        {
+          "PackageIdentifier": "JetBrains.Rider"
+        },
+        {
+          "PackageIdentifier": "JetBrains.DataGrip"
+        },
+        {
+          "PackageIdentifier": "Kubernetes.minikube"
+        },
+        {
+          "PackageIdentifier": "Microsoft.BotFrameworkEmulator"
+        },
+        {
+          "PackageIdentifier": "Microsoft.BotFrameworkComposer"
+        },
+        {
+          "PackageIdentifier": "Microsoft.CLRTypesSQLServer.2019"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.SDK.3_1"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.SDK.5"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.SDK.6"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.SDK.7"
+        },
+        {
+          "PackageIdentifier": "Microsoft.Git"
+        },
+        {
+          "PackageIdentifier": "Microsoft.NuGet"
+        },
+        {
+          "PackageIdentifier": "Microsoft.PowerShell"
+        },
+        {
+          "PackageIdentifier": "Microsoft.PowerAutomateDesktop"
+        },
+        {
+          "PackageIdentifier": "Microsoft.PowerToys"
+        },
+        {
+          "PackageIdentifier": "Microsoft.Sqlcmd"
+        },        
+        {
+          "PackageIdentifier": "Microsoft.MultilingualAppToolkit"
+        },
+        {
+          "PackageIdentifier": "Microsoft.SQLServer.2019.Developer"
+        },
+        {
+          "PackageIdentifier": "Microsoft.SQLServer2012NativeClient"
+        },
+        {
+          "PackageIdentifier": "Microsoft.SQLServerManagementStudio"
+        },
+        {
+          "PackageIdentifier": "Microsoft.TeamMate"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VisualStudio.2022.Community"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VisualStudioCode"
+        },
+        {
+          "PackageIdentifier": "Microsoft.WindowsAdminCenter"
+        },
+        {
+          "PackageIdentifier": "Microsoft.WindowsSDK"
+        },
+        {
+          "PackageIdentifier": "Microsoft.WindowsTerminal"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VisualStudio.Locator"
+        },
+        {
+          "PackageIdentifier": "Notepad++.Notepad++"
+        },
+        {
+          "PackageIdentifier": "OpenJS.NodeJs"
+        },
+        {
+          "PackageIdentifier": "Postman.Postman"
+        },
+        {
+          "PackageIdentifier": "ScooterSoftware.BeyondCompare4"
+        }
+      ],
+      "SourceDetails": {
+        "Argument": "https://cdn.winget.microsoft.com/cache",
+        "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+        "Name": "winget",
+        "Type": "Microsoft.PreIndexed.Package"
+      }
+    }
+  ],
+  "WinGetVersion": "1.3.2691"
+} 

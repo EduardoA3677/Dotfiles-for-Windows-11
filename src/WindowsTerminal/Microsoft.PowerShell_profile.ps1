@@ -98,13 +98,13 @@ Set-Alias -Name "..." -Value "Set-Location-Two-Times";
 function Set-Location-Three-Times { Set-Location "..\..\.."; };
 Set-Alias -Name "...." -Value "Set-Location-Three-Times";
 
-#function New-Folder-Navigate-To-It {
-#  param($newFolderName);
-#
-#  New-Item $newFolderName -ItemType directory;
-#  Set-Location -Path $newFolderName;
-#};
-#Set-Alias -Name "mkcd" -Value "New-Folder-Navigate-To-It";
+function New-Folder-Navigate-To-It {
+  param($newFolderName);
+
+  New-Item $newFolderName -ItemType directory;
+  Set-Location -Path $newFolderName;
+};
+Set-Alias -Name "mkcd" -Value "New-Folder-Navigate-To-It";
 
 function Open-Recycle-Bin {
   explorer.exe Shell:RecycleBinFolder;
