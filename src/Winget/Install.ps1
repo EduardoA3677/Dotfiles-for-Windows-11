@@ -70,7 +70,6 @@ wip Microsoft.PowerAutomateDesktop
 wip Microsoft.PowerToys 
 wip Microsoft.Sqlcmd 
 wip Microsoft.Sysinternals.Autoruns 
-wip Microsoft.Sysinternals.ProcessMonitor 
 wip Microsoft.Sysinternals.ProcessExplorer 
 wip Microsoft.TeamMate 
 wip Microsoft.VisualStudio.Locator 
@@ -88,7 +87,7 @@ wip CodeSector.TeraCopy
 wip DisplayLink.GraphicsDriver
 wip Postman.Postman.Canary
 
-winget install -e --id Microsoft.VisualStudio.2022.Community --override "--passive --wait --config (".\.vsconfig")
+winget install -e --id Microsoft.VisualStudio.2022.Community --override "--passive --wait --config (.\.vsconfig)"
 #--add Microsoft.VisualStudio.Workload.MSBuildTools
 #--add Microsoft.VisualStudio.Workload.WebBuildTools 
 #--add Microsoft.VisualStudio.Workload.NodeBuildTools

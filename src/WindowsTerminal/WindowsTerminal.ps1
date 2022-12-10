@@ -62,4 +62,4 @@ Install-Module -Name "PSReadLine" -Repository "PSGallery" -RequiredVersion 2.1.0
 Set-OhMyPosh-Theme;
 Set-PowerShell-Profile;
 Set-WindowsTerminal-Settings;
-Open-Close-WindowsTerminal;
+#Open-Close-WindowsTerminal;
