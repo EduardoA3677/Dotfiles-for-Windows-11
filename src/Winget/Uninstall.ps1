@@ -1,3 +1,15 @@
+wuip XPFFTQ037JWMHS					# Microsoft Edge Browser
+wuip 9NBLGGH4QGHW					# Microsoft Sticky Notes
+wuip 9NBLGGH5R558					# Microsoft To Do
+wuip 9MSPC6MP8FM4 					# Microsoft Whiteboard
+wuip XP89DCGQ3K6VLD					# Microsoft PowerToys
+#wuip XP8BT8DW290MPQ					# Microsoft Teams
+#wuip 9MZ1SNWT0N5D					# PowerShell
+#wuip 9N0DX20HK701					# Windows Terminal
+wuip XPDCFJDKLZJLP8					# Visual Studio Community 2022
+wuip XP8LFCZM790F6B					# Visual Studio Code - Insiders
+#wuip 9WZDNCRD29V9					# Office (Microsoft 365)
+
 wuip WiresharkFoundation.Wireshark 
 wuip WinMerge.WinMerge 
 wuip wethat.onenotetaggingkit 
@@ -12,7 +24,6 @@ wuip Microsoft.WindowsAdminCenter
 wuip Microsoft.vott 
 wuip Microsoft.VisualStudioCode.Insiders 
 wuip Microsoft.VisualStudio.Locator 
-wuip Microsoft.VisualStudio.2022.Community
 wuip Microsoft.TeamMate 
 wuip Microsoft.Sysinternals.ProcessExplorer 
 wuip Microsoft.Sysinternals.ProcessMonitor 
@@ -24,7 +35,6 @@ wuip Microsoft.PowerAppsCLI
 wuip Microsoft.OpenSSH.Beta 
 wuip Microsoft.NuGet 
 wuip Microsoft.MultilingualAppToolKit 
-wuip Microsoft.Edge 
 wuip Microsoft.DotNet.SDK.7 
 wuip Microsoft.DotNet.SDK.6 
 wuip Microsoft.DotNet.SDK.5 

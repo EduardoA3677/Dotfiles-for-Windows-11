@@ -43,27 +43,18 @@ $wingetList = Invoke-WingetList
 #$InstalledSoftware = Get-ChildItem "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall"
 #foreach($obj in $InstalledSoftware){write-host $obj.GetValue('DisplayName') -NoNewline; write-host " | " -NoNewline; write-host $obj.GetValue('DisplayVersion')}
 
-wip Microsoft.PowerShell
-wip 7zip.7zip                               
-wip AgileBits.1Password           
-wip Canonical.Ubuntu              
-wip CodeSector.TeraCopy      
-wip Discord.Discord  
-wip Dropbox.Dropbox 
+wip Microsoft.NuGet 
 wip Git.Git 
 wip GitExtensionsTeam.GitExtensions 
 wip GitHub.cli 
-wip Google.Drive 
 wip Grammarly.Grammarly 
 wip Grammarly.Grammarly.Office 
 wip HermannSchinagl.LinkShellExtension 
 wip JanDeDobbeleer.OhMyPosh 
 wip jasongin.nvs 
-wip JetBrains.Toolbox 
+wip Canonical.Ubuntu
 wip Kubernetes.minikube 
-
 wip Microsoft.AzureDataStudio 
-wip Microsoft.BingWallpaper 
 wip Microsoft.BotFrameworkComposer 
 wip Microsoft.BotFrameworkEmulator 
 wip Microsoft.DeploymentToolkit 
@@ -71,7 +62,7 @@ wip Microsoft.DotNet.SDK.3_1
 wip Microsoft.DotNet.SDK.5 
 wip Microsoft.DotNet.SDK.6 
 wip Microsoft.DotNet.SDK.7 
-wip Microsoft.NuGet 
+wip Microsoft.WindowsSDK 
 wip Microsoft.OpenSSH.Beta 
 wip Microsoft.PowerAppsCLI 
 wip Microsoft.PowerAutomateDesktop 
@@ -81,27 +72,39 @@ wip Microsoft.Sysinternals.Autoruns
 wip Microsoft.Sysinternals.ProcessMonitor 
 wip Microsoft.Sysinternals.ProcessExplorer 
 wip Microsoft.TeamMate 
-wip Microsoft.VisualStudio.2022.Community
 wip Microsoft.VisualStudio.Locator 
-wip Microsoft.VisualStudioCode.Insiders 
 wip Microsoft.vott 
 wip Microsoft.WindowsAdminCenter 
-wip Microsoft.WindowsSDK 
-wip Microsoft.WindowsTerminal 
 wip Microsoft.WingetCreate 
 wip Notepad++.Notepad++ 
 wip OpenJS.NodeJS 
 wip Postman.Postman.Canary 
-wip ScooterSoftware.BeyondCompare4 
 wip wethat.onenotetaggingkit 
 wip WinMerge.WinMerge 
-wip WiresharkFoundation.Wireshark 
+wip 7zip.7zip                               get
+wip AgileBits.1Password           
+wip CodeSector.TeraCopy 
+wip DisplayLink.GraphicsDriver
 
-# Line
-wip 9WZDNCRFJ2G6
+wip XPFFTQ037JWMHS					# Microsoft Edge Browser
+wip 9NBLGGH4QGHW					# Microsoft Sticky Notes
+wip 9NBLGGH5R558					# Microsoft To Do
+wip 9MSPC6MP8FM4 					# Microsoft Whiteboard
+wip XP89DCGQ3K6VLD					# Microsoft PowerToys
+wip XP8BT8DW290MPQ					# Microsoft Teams
+wip 9MZ1SNWT0N5D					# PowerShell
+wip 9N0DX20HK701					# Windows Terminal
+wip XPDCFJDKLZJLP8					# Visual Studio Community 2022
+wip XP8LFCZM790F6B					# Visual Studio Code - Insiders
+wip 9WZDNCRD29V9					# Office (Microsoft 365)
 
-# Teams
-wip XP8BT8DW290MPQ
+wip Microsoft.BingWallpaper
+wip Discord.Discord  
+wip Dropbox.Dropbox 
+wip Google.Drive 
+wip JetBrains.Toolbox 
+wip ScooterSoftware.BeyondCompare4 
+wip 9WZDNCRFJ2G6 					# Line
 
 # Likely has a have a virus! Use with caution 
 # wip mentebinaria.retoolkit 

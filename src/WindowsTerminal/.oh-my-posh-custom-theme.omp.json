@@ -1,94 +1,94 @@
 {
-	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-	"blocks": [
-		{
-			"type": "prompt",
-			"alignment": "left",
-			"segments": [
-				{
-					"type": "os",
-					"style": "powerline",
-					"background": "white",
-					"foreground": "blue"
-				},
-				{
-					"type": "root",
-					"style": "powerline",
-					"powerline_symbol": "",
-					"background": "yellow",
-					"foreground": "black",
-					"properties": { "root_icon": "" }
-				},
-				{
-					"type": "path",
-					"style": "powerline",
-					"powerline_symbol": "",
-					"background": "blue",
-					"foreground": "black",
-					"properties": {
-						"enable_hyperlink": true,
-						"home_icon": "",
-						"folder_icon": "",
-						"folder_separator_icon": "  ",
-						"style": "full"
-					}
-				},
-				{
-					"type": "git",
-					"style": "powerline",
-					"powerline_symbol": "",
-					"background": "green",
-					"foreground": "black",
-					"properties": {
-						"display_status": true,
-						"display_stash_count": true,
-						"display_upstream_icon": true,
-						"status_colors_enabled": true,
-						"local_changes_color": "yellow"
-					}
-				},
-				{
-					"type": "executiontime",
-					"style": "powerline",
-					"powerline_symbol": "",
-					"background": "white",
-					"foreground": "black",
-					"properties": {
-						"threshold": 100,
-						"style": "roundrock",
-						"prefix": "  [ ",
-						"postfix": " ] "
-					}
-				},
-				{
-					"type": "exit",
-					"style": "powerline",
-					"powerline_symbol": "",
-					"background": "red",
-					"foreground": "black",
-					"properties": {
-						"prefix": "  "
-					}
-				}
-			]
-		},
-		{
-			"type": "prompt",
-			"alignment": "left",
-			"newline": true,
-			"segments": [
-				{
-					"type": "text",
-					"style": "plain",
-					"background": "transparent",
-					"foreground": "blue",
-					"properties": {
-						"prefix": "",
-						"text": "❯"
-					}
-				}
-			]
-		}
-	],
-	"final_space": false
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "powerline",
+          "foreground": "blue",
+          "background": "white",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "black",
+          "background": "yellow",
+          "template": " \uf0e7 ",
+          "properties": {
+            "root_icon": "\ue26e"
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "black",
+          "background": "blue",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "folder_icon": "\uf07c",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": "\uf7db",
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "black",
+          "background": "green",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
+          ],
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "black",
+          "background": "white",
+          "template": " \ue385 [ {{ .FormattedMs }} ] ",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 100
+          }
+        },
+        {
+          "type": "exit",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "black",
+          "background": "red",
+          "template": " \uf00d {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "blue",
+          "background": "transparent",
+          "template": "\u276f "
+        }
+      ],
+      "newline": true
+    }
+  ]
 }
