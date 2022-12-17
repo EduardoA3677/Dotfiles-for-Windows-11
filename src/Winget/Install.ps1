@@ -58,15 +58,6 @@ wip Microsoft.AzureDataStudio
 wip Microsoft.BotFrameworkComposer 
 wip Microsoft.BotFrameworkEmulator 
 wip Microsoft.DeploymentToolkit 
-wip Microsoft.DotNet.SDK.3_1
-wip Microsoft.DotNet.Runtime.3_1 
-wip Microsoft.DotNet.SDK.5 
-wip Microsoft.DotNet.Runtime.5 
-wip Microsoft.DotNet.SDK.6
-wip Microsoft.DotNet.Runtime.6 
-wip Microsoft.DotNet.SDK.7 
-wip Microsoft.DotNet.Runtime.7
-wip Microsoft.WindowsSDK 
 wip Microsoft.OpenSSH.Beta 
 wip Microsoft.PowerAppsCLI 
 wip Microsoft.PowerAutomateDesktop 
@@ -78,7 +69,6 @@ wip Microsoft.TeamMate
 wip Microsoft.VisualStudio.Locator 
 wip Microsoft.vott 
 wip Microsoft.WingetCreate 
-wip Notepad++.Notepad++ 
 wip OpenJS.NodeJS 
 wip Postman.Postman.Canary 
 wip wethat.onenotetaggingkit 
@@ -89,7 +79,7 @@ wip CodeSector.TeraCopy
 wip DisplayLink.GraphicsDriver
 wip Postman.Postman.Canary
 
-winget install -e --id Microsoft.VisualStudio.2022.Community --override "--passive --wait --config (.\.vsconfig)"
+#winget install -e --id Microsoft.VisualStudio.2022.Community --override "--passive --wait --config (.\.vsconfig)"
 
 wip XPFFTQ037JWMHS					# Microsoft Edge Browser
 wip 9NBLGGH4QGHW					# Microsoft Sticky Notes
