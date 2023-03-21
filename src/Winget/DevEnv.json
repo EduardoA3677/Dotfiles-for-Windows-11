@@ -8,16 +8,10 @@
           "PackageIdentifier": "7zip.7zip"
         },
         {
-          "PackageIdentifier": "AgileBits.1Password"
-        },
-        {
           "PackageIdentifier": "Canonical.Ubuntu"
         },
         {
           "PackageIdentifier": "CoreyButler.NVMforWindows"
-        },
-        {
-          "PackageIdentifier": "DBBrowserForSQLite.DBBrowserForSQLite"
         },
         {
           "PackageIdentifier": "Git.Git"
@@ -26,40 +20,10 @@
           "PackageIdentifier": "GitHub.cli"
         },
         {
-          "PackageIdentifier": "Google.AndroidStudio"
-        },
-        {
           "PackageIdentifier": "HermannSchinagl.LinkShellExtension"
         },
         {
           "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
-        },
-        {
-          "PackageIdentifier": "JetBrains.dotUltimate"
-        },
-        {
-          "PackageIdentifier": "JetBrains.Toolbox"
-        },
-        {
-          "PackageIdentifier": "JetBrains.DataGrip"
-        },
-        {
-          "PackageIdentifier": "JetBrains.ReSharper"
-        },
-        {
-          "PackageIdentifier": "JetBrains.Rider"
-        },
-        {
-          "PackageIdentifier": "JetBrains.DataGrip"
-        },
-        {
-          "PackageIdentifier": "Kubernetes.minikube"
-        },
-        {
-          "PackageIdentifier": "Microsoft.BotFrameworkEmulator"
-        },
-        {
-          "PackageIdentifier": "Microsoft.BotFrameworkComposer"
         },
         {
           "PackageIdentifier": "Microsoft.CLRTypesSQLServer.2019"
@@ -116,9 +80,6 @@
           "PackageIdentifier": "Microsoft.VisualStudioCode"
         },
         {
-          "PackageIdentifier": "Microsoft.WindowsAdminCenter"
-        },
-        {
           "PackageIdentifier": "Microsoft.WindowsSDK"
         },
         {
@@ -136,9 +97,6 @@
         {
           "PackageIdentifier": "Postman.Postman"
         },
-        {
-          "PackageIdentifier": "ScooterSoftware.BeyondCompare4"
-        }
       ],
       "SourceDetails": {
         "Argument": "https://cdn.winget.microsoft.com/cache",
