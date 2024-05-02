@@ -92,7 +92,7 @@ function Install-Hugo-In-Ubuntu {
   $HugoLastVersion = (Invoke-WebRequest $HugoReleasesUri | ConvertFrom-Json)[0].tag_name.Replace("v", "");
   Write-Host "Latest Hugo version is ${HugoLastVersion}" -ForegroundColor "Green";
 
-  $HugoDownloadUri = "https://github.com/gohugoio/hugo/releases/download/v${HugoLastVersion}/hugo_${HugoLastVersion}_Linux-64bit.deb";
+  $HugoDownloadUri = "https://github.com/gohugoio/hugo/releases/download/v${HugoLastVersion}/hugo_${HugoLastVersion}_Linux-amd64.deb";
   Write-Host "Download url is ${HugoDownloadUri}" -ForegroundColor "Green";
 
   $DotfilesHugoInstallerPath = Join-Path -Path $DotfilesWorkFolder -ChildPath "WSL" | Join-Path -ChildPath "hugo-installer-${HugoLastVersion}.deb";
