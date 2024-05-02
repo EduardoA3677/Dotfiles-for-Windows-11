@@ -8,12 +8,11 @@ Clear-Host;
 #                                  Oh my Posh!                                 #
 ################################################################################
 
-Import-Module "oh-my-posh";
+#Import-Module "oh-my-posh";
 Import-Module "posh-git";
 Import-Module "Terminal-Icons";
 Import-Module "PSReadLine";
-Set-PoshPrompt -Theme "~/.oh-my-posh-custom-theme.omp.json";
-
+oh-my-posh init pwsh --config "~/.oh-my-posh-custom-theme.omp.json" | Invoke-Expression
 ################################################################################
 #                                  PSReadLine                                  #
 ################################################################################
@@ -167,7 +166,7 @@ Set-Alias -Name "gcmsg" -Value "Invoke-Git-Commit-Message";
 function Invoke-Git-Add-And-Commit-Message {
   param($message);
 
-  git add --all && commit -m $message;
+  git add --all ; commit -m $message;
 };
 Set-Alias -Name "gam" -Value "Invoke-Git-Add-And-Commit-Message";
 
