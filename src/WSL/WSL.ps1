@@ -242,7 +242,13 @@ function Set-Zsh-As-Default-In-Ubuntu {
   # Change just for a user: sudo chsh -s $WslZshPath $USER_NAME;
 }
 
+DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V /NoRestart
+DISM /Online /Enable-Feature /FeatureName:VirtualMachinePlatform /All /NoRestart
+DISM /Online /Enable-Feature /FeatureName:Containers /All /NoRestart
 choco install -y "wsl2" --params "/Version:2 /Retry:true";
+wsl --set-default-version 2
+wsl.exe --install
+wsl.exe --update
 choco install -y "wsl-ubuntu-2004" --params "/InstallRoot:true" --execution-timeout 3600;
 
 Update-Ubuntu-Packages-Repository;
