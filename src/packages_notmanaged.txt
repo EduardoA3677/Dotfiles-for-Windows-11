@@ -1,18 +1,5 @@
-1Password|8.9.8
 7-Zip 22.01 (x64)|22.01
-Beyond Compare 4.4.4|4.4.4.27058
-Bing Wallpaper|1.0.9.9
-BlueStacks 5|5.9.410.1001
-BlueStacks X|0.18.52.1
-Browser for SQL Server 2019|15.0.2000.5
-Cleaner One Pro 6.6.0|6.6.0
-DB Browser for SQLite|3.12.2
-Discord|1.0.9003
-Dropbox|160.4.4703
 GitHub CLI|2.20.2
-Google Drive|67.0.2.0
-IIS 10.0 Express|10.0.06614
-Kernel VHD Viewer Version 19.12|
 Microsoft .NET Core SDK 3.1.425 (x64)|3.1.425.16213
 Microsoft .NET Framework 4.8.1 SDK|4.8.09032
 Microsoft .NET Framework 4.8.1 Targeting Pack|4.8.09032
@@ -21,62 +8,15 @@ Microsoft .NET SDK 5.0.408 (x64)|5.4.822.21928
 Microsoft .NET SDK 6.0.403 (x64)|6.4.322.52402
 Microsoft .NET SDK 7.0.100 (x64)|7.1.22.52112
 Microsoft .NET SDK 7.0.100 (x64) from Visual Studio|7.1.22.52112
-Microsoft 365 - en-us|16.0.15726.20202
-Microsoft Azure Authoring Tools - v2.9.7|2.9.8999.45
-Microsoft Azure Libraries for .NET – v2.9|3.0.0127.060
-Microsoft Azure PowerShell - April 2018|5.7.0.18831
-Microsoft Bing Service|2.0.0.7
-Microsoft Build of OpenJDK with Hotspot 11.0.17+8 (x64)|11.0.17.8
-Microsoft Help Viewer 2.3|2.3.33122
-Microsoft ODBC Driver 17 for SQL Server|17.7.2.1
-Microsoft OLE DB Driver for SQL Server|18.5.0.0
-Microsoft OneDrive|22.227.1030.0001
-Microsoft SQL Server 2008 R2 ADOMD.NET|10.50.1600.1
-Microsoft SQL Server 2012 Native Client |11.4.7462.6
-Microsoft SQL Server 2019 (64-bit)|
-Microsoft SQL Server 2019 LocalDB |15.0.4153.1
-Microsoft SQL Server 2019 Setup (English)|15.0.4013.40
-Microsoft SQL Server 2019 T-SQL Language Service |15.0.2000.5
-Microsoft SQL Server Compact 4.0 x64 ENU|4.0.8482.1
-Microsoft SQL Server Management Studio - 19.0 Preview 3|16.0.19061.0
-Microsoft System CLR Types for SQL Server 2019|15.0.2000.5
-Microsoft Teams|1.5.00.21668
 Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.17|9.0.30729
 Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161|9.0.30729.6161
 Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40664|12.0.40664.0
 Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.34.31931|14.34.31931.0
 Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.34.31931|14.34.31931.0
-Microsoft Visual Studio Code|1.73.1
-Microsoft Visual Studio Installer|3.4.2244.14676
-Microsoft VSS Writer for SQL Server 2019|15.0.2000.5
-Microsoft Web Deploy 4.0|10.0.5923
 Microsoft Windows Desktop Runtime - 6.0.11 (x64)|6.0.11.31823
 Microsoft Windows Desktop Runtime - 6.0.11 (x86)|6.0.11.31823
 Node.js|18.12.1
-NoxPlayer|7.0.5.0
 NVM for Windows |
 Oh My Posh version 12.23.0 (Current user)|12.23.0
 Oh My Posh version 12.24.0 (All users)|12.24.0
-Oracle VM VirtualBox 7.0.4|7.0.4
-Postman x86_64 10.1.2|10.1.2
 PowerShell 7-x64|7.3.0.0
-SQL Server 2008 R2 Analysis Services OLE DB Provider|10.50.1600.1
-Syncfusion Essential Studio 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for .NET MAUI 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for ASP.NET Core (Essential JS 1) 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for ASP.NET Core 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for ASP.NET MVC 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for Blazor 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for Flutter 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for JavaScript (Essential JS 1) 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for JavaScript 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for Windows Forms 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for WinUI 20.3.0.47|20.3.0.47
-Syncfusion Essential Studio for Xamarin 20.3.0.47|20.3.0.47
-Trend Micro Maximum Security|17.7
-Trend Micro Password Manager|5.8.0.1323
-Trend Micro Troubleshooting Tool|6.0
-Visual Studio Community 2022|17.4.2
-Windows Application Driver|1.2.1.0
-Windows SDK AddOn|10.1.0.0
-Windows Software Development Kit - Windows 10.0.22621.755|10.1.22621.755

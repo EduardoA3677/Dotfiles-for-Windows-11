@@ -1,1 +1,1 @@
-choco install -y "docker-desktop" --execution-timeout 3600;
+choco install -y "git" --execution-timeout 3600;

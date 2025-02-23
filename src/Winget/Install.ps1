@@ -47,64 +47,18 @@ wip Microsoft.NuGet
 wip Git.Git 
 wip GitExtensionsTeam.GitExtensions 
 wip GitHub.cli 
-wip Grammarly.Grammarly 
-wip Grammarly.Grammarly.Office 
 wip HermannSchinagl.LinkShellExtension 
 wip JanDeDobbeleer.OhMyPosh 
 wip jasongin.nvs 
-wip Canonical.Ubuntu
-wip Kubernetes.minikube 
-wip Microsoft.AzureDataStudio 
-wip Microsoft.BotFrameworkComposer 
-wip Microsoft.BotFrameworkEmulator 
-wip Microsoft.DeploymentToolkit 
 wip Microsoft.OpenSSH.Beta 
-wip Microsoft.PowerAppsCLI 
-wip Microsoft.PowerAutomateDesktop 
-wip Microsoft.PowerToys 
-wip Microsoft.Sqlcmd 
-wip Microsoft.Sysinternals.Autoruns 
-wip Microsoft.Sysinternals.ProcessExplorer 
-wip Microsoft.TeamMate 
-wip Microsoft.VisualStudio.Locator 
 wip Microsoft.vott 
 wip Microsoft.WingetCreate 
 wip OpenJS.NodeJS 
-wip Postman.Postman.Canary 
-wip wethat.onenotetaggingkit 
-wip WinMerge.WinMerge 
-wip 7zip.7zip                               
-wip AgileBits.1Password           
-wip CodeSector.TeraCopy 
-wip DisplayLink.GraphicsDriver
-wip Postman.Postman.Canary
 
 #winget install -e --id Microsoft.VisualStudio.2022.Community --override "--passive --wait --config (.\.vsconfig)"
 
-wip XPFFTQ037JWMHS					# Microsoft Edge Browser
-wip 9NBLGGH4QGHW					# Microsoft Sticky Notes
-wip 9NBLGGH5R558					# Microsoft To Do
-wip 9MSPC6MP8FM4 					# Microsoft Whiteboard
-wip XP8BT8DW290MPQ					# Microsoft Teams
 wip 9MZ1SNWT0N5D					# PowerShell
 wip 9N0DX20HK701					# Windows Terminal
-#wip XPDCFJDKLZJLP8					# Visual Studio Community 2022
-wip XP8LFCZM790F6B					# Visual Studio Code - Insiders
-wip 9WZDNCRD29V9					# Office (Microsoft 365)
-
-wip Microsoft.BingWallpaper
-wip Discord.Discord  
-wip Dropbox.Dropbox 
-wip Google.Drive 
-wip JetBrains.Toolbox 
-wip JetBrains.dotUltimate
-wip ScooterSoftware.BeyondCompare4 
-wip 9WZDNCRFJ2G6 					# Line
-
-wip WiresharkFoundation.Wireshark
-wip SleuthKit.Autopsy
-
-
 
 # Likely has a have a virus! Use with caution 
 # wip mentebinaria.retoolkit 

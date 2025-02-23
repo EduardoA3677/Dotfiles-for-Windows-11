@@ -8,9 +8,6 @@
           "PackageIdentifier": "7zip.7zip"
         },
         {
-          "PackageIdentifier": "Canonical.Ubuntu"
-        },
-        {
           "PackageIdentifier": "CoreyButler.NVMforWindows"
         },
         {
@@ -24,9 +21,6 @@
         },
         {
           "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
-        },
-        {
-          "PackageIdentifier": "Microsoft.CLRTypesSQLServer.2019"
         },
         {
           "PackageIdentifier": "Microsoft.DotNet.SDK.3_1"
@@ -53,36 +47,6 @@
           "PackageIdentifier": "Microsoft.PowerAutomateDesktop"
         },
         {
-          "PackageIdentifier": "Microsoft.PowerToys"
-        },
-        {
-          "PackageIdentifier": "Microsoft.Sqlcmd"
-        },        
-        {
-          "PackageIdentifier": "Microsoft.MultilingualAppToolkit"
-        },
-        {
-          "PackageIdentifier": "Microsoft.SQLServer.2019.Developer"
-        },
-        {
-          "PackageIdentifier": "Microsoft.SQLServer2012NativeClient"
-        },
-        {
-          "PackageIdentifier": "Microsoft.SQLServerManagementStudio"
-        },
-        {
-          "PackageIdentifier": "Microsoft.TeamMate"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VisualStudio.2022.Community"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VisualStudioCode"
-        },
-        {
-          "PackageIdentifier": "Microsoft.WindowsSDK"
-        },
-        {
           "PackageIdentifier": "Microsoft.WindowsTerminal"
         },
         {
@@ -93,10 +57,7 @@
         },
         {
           "PackageIdentifier": "OpenJS.NodeJs"
-        },
-        {
-          "PackageIdentifier": "Postman.Postman"
-        },
+        }
       ],
       "SourceDetails": {
         "Argument": "https://cdn.winget.microsoft.com/cache",

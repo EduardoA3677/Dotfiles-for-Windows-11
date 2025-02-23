@@ -34,7 +34,6 @@ function Install-VSCode-Extensions-In-WSL {
   Write-Host "Installing Visual Studio Code extensions in WSL:" -ForegroundColor "Green";
 
   wsl code --install-extension ue.alphabetical-sorter;
-  wsl code --install-extension ms-azuretools.vscode-docker;
   wsl code --install-extension dbaeumer.vscode-eslint;
   wsl code --install-extension eamodio.gitlens;
   wsl code --install-extension golang.go;
@@ -241,9 +240,6 @@ function Set-Zsh-As-Default-In-Ubuntu {
 
   # Change just for a user: sudo chsh -s $WslZshPath $USER_NAME;
 }
-
-choco install -y "wsl2" --params "/Version:2 /Retry:true";
-choco install -y "wsl-ubuntu-2004" --params "/InstallRoot:true" --execution-timeout 3600;
 
 Update-Ubuntu-Packages-Repository;
 Update-Ubuntu-Packages;

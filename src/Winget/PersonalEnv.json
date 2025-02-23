@@ -5,21 +5,6 @@
     {
       "Packages": [
         {
-          "PackageIdentifier": "BlueStack.BlueStacks"
-        },
-        {
-          "PackageIdentifier": "Dropbox.Dropbox"
-        },
-        {
-          "PackageIdentifier": "Grammarly.Grammarly.Office"
-        },
-        {
-          "PackageIdentifier": "Google.Drive"
-        },
-        {
-          "PackageIdentifier": "Microsoft.BingWallpaper"
-        },
-        {
           "PackageIdentifier": "LINE.LINE"
         }
       ],
